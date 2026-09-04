@@ -200,7 +200,7 @@ The Global Executive Overview provides high-level monitoring of:
 - Customer Segment Performance
 - Delivery Risk by Shipping Mode
 
-![Global Supply Chain Performance](powerbi/global_overview.png)
+![Global Supply Chain Performance](powerbi/screenshots/global_overview.png)
 
 ### Page 2 - India Supply Chain Deep Dive
 
@@ -212,7 +212,7 @@ The India Operational Deep Dive provides detailed analysis of:
 - Delivery Performance by City & Shipping Mode
 - Shipping Performance by Mode
 
-![India Supply Chain Deep Dive](powerbi/india_deep_dive.png)
+![India Supply Chain Deep Dive](powerbi/screenshots/india_deep_dive.png)
 
 ### 📌 Reporting Thresholds
 
