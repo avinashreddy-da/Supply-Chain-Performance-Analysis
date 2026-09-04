@@ -28,13 +28,11 @@ This project analyzes the DataCo Supply Chain dataset to understand sales, profi
 
 ### • 📊 Business and Delivery Analysis using PostgreSQL
 
-### • 🔍 Operational Investigation and Root-Cause Analysis
+### • 🔍 Operational Investigation
 
 ### • 📊 Interactive Power BI Dashboard Development
 
 The project aims to identify where delivery performance breaks down, which markets and shipping modes require attention and how product mix and order volume influence revenue patterns.
-
----
 
 ## 🎯 Project Objective
 
@@ -51,8 +49,6 @@ This project aims to:
 
 The overall goal is to generate actionable insights that help prioritize supply chain issues and support better business and operational decision-making.
 
----
-
 ## 🏦 Business Problem
 
 A global supply chain business needs to understand not only whether delivery performance is poor, but also where operational attention should be prioritized across markets, cities, product categories and shipping modes.
@@ -60,8 +56,6 @@ A global supply chain business needs to understand not only whether delivery per
 Revenue performance also needs to be evaluated alongside order volume and product mix because an increase in orders does not always result in an increase in revenue.
 
 This project addresses both problems by identifying where delivery performance breaks down and investigating unusual revenue patterns rather than simply reporting them.
-
----
 
 ## 📂 Dataset Description
 
@@ -78,8 +72,6 @@ The dataset used is the publicly available DataCo Supply Chain dataset, containi
 | Location & Market | `market`, `order_country`, `order_state`, `order_city`, `order_region` |
 
 **Note on 2018 data coverage:** The dataset spans 2015 to 2018, but 2015 to 2017 provide usable monthly coverage while 2018 is extremely sparse with records across only a few months. Therefore, 2018 is not treated as a reliable year-over-year business trend. The main sales trend analysis focuses on 2015 to 2017, while January 2018 was investigated separately because it had enough activity for comparison with December 2017.
-
----
 
 ## 🛠 Tools and Libraries Used
 
@@ -101,8 +93,6 @@ The dataset used is the publicly available DataCo Supply Chain dataset, containi
 ### 🧪 Development Environment
 
 - Jupyter Notebook
-
----
 
 ## 🔄 Project Workflow
 
@@ -154,8 +144,6 @@ Investigated the January 2018 revenue decline by comparing December 2017 and Jan
 - Built an India Operational Deep Dive for detailed operational analysis
 - Added KPIs, business performance analysis and delivery insights
 
----
-
 ## 🔍 Key Insights
 
 ### 🌍 Global Insights
@@ -176,8 +164,6 @@ Investigated the January 2018 revenue decline by comparing December 2017 and Jan
 - City x shipping-mode analysis provides a more actionable operational view than analyzing city or shipping mode alone. **Mumbai Second Class** is a notable hotspot.
 - **Second Class** has the largest gap between scheduled and actual shipping time at **+2.05 days**, indicating a significant service-level mismatch.
 
----
-
 ## 📉 January 2018 Revenue Anomaly
 
 January 2018 sales decreased by **3.8%** compared with December 2017, while orders increased by **28%**. Sales per order also decreased by **24.8%**.
@@ -185,8 +171,6 @@ January 2018 sales decreased by **3.8%** compared with December 2017, while orde
 A product-level investigation showed a shift in product mix. Several high-value December products such as **Porcelain Crafts, Dell Laptop, Industrial Consumer Electronics and Children's Heaters** had no January sales, while January activity included higher-volume lower-value products such as **Fighting Video Games and Toys**.
 
 **Business conclusion:** The revenue decline was driven by a shift in product mix rather than lower order demand.
-
----
 
 ## 💼 Business Impact
 
@@ -197,37 +181,47 @@ A product-level investigation showed a shift in product mix. Several high-value 
 - Monitor product mix alongside order volume when evaluating revenue trends
 - Protect strong-performing categories and identify opportunities in underdeveloped markets and customer segments
 
----
-
 ## 📊 Power BI Dashboard
 
-- Created an interactive two-page Power BI dashboard for supply chain performance analysis
-- **Page 1** provides a Global Executive Overview of sales, orders, profitability, markets, customer segments, delivery risk and shipping modes
-- **Page 2** provides an India Operational Deep Dive covering states, cities, categories and city x shipping-mode delivery performance
-- Included KPI cards and business-focused visualizations for executive and operational decision-making
+The dashboard was designed as two pages for different levels of business analysis.
 
-### 📌 KPI Cards
+### Page 1 - Global Supply Chain Performance
+
+**Global KPI Cards**
 
 **Total Sales:** $36.66M | **Total Orders:** 63,663 | **Total Profit:** $3.97M | **Profit Margin:** 10.82% | **Late Delivery Rate:** 54.83% | **Average Shipping Days:** 3.50 days
+
+The Global Executive Overview provides high-level monitoring of:
+
+- Sales by Market
+- Sales Trend Over Time
+- Late Delivery Rate by Country
+- Category Sales & Profitability
+- Customer Segment Performance
+- Delivery Risk by Shipping Mode
+
+![Global Supply Chain Performance](powerbi/screenshots/global_overview.png)
+
+### Page 2 - India Supply Chain Deep Dive
+
+The India Operational Deep Dive provides detailed analysis of:
+
+- Sales & Orders by State
+- Late Delivery Rate across Cities
+- Late Delivery by Category
+- Delivery Performance by City & Shipping Mode
+- Shipping Performance by Mode
+
+![India Supply Chain Deep Dive](powerbi/screenshots/india_deep_dive.png)
+
+### 📌 Reporting Thresholds
 
 Reporting thresholds were applied to reduce the risk of overinterpreting small samples:
 
 - Global country-level delivery analysis: **1,000+ orders**
 - India city-level and city x shipping-mode analysis: **20+ orders**
 
-📌 Dashboard Screenshots: (added in repository)
-
-📌 File: `Supply_Chain_Dashboard.pbix`
-
-### Page 1 - Global Supply Chain Performance
-
-![Dashboard](Dashboard_Page1.png)
-
-### Page 2 - India Supply Chain Deep Dive
-
-![Dashboard](Dashboard_Page2.png)
-
----
+📌 Power BI File: `powerbi/Supply_Chain_Dashboard.pbix`
 
 ## 📌 Key Takeaways
 
@@ -236,8 +230,6 @@ Reporting thresholds were applied to reduce the risk of overinterpreting small s
 - India city x shipping-mode analysis provides more actionable operational prioritization.
 - Revenue should be evaluated alongside order volume and product mix.
 - Combining Python data cleaning, PostgreSQL business analysis and Power BI reporting creates an end-to-end Data Analyst workflow.
-
----
 
 ## 👤 Author
 
